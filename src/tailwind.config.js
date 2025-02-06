@@ -3,8 +3,12 @@ module.exports = {
       "./src/**/*.{html,js,jsx,ts,tsx}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+          montserrat: ['Montserrat', 'sans-serif'],
+          raleway: ['Raleway', 'sans-serif'],
+      },
     },
     plugins: [],
   }
-content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+}

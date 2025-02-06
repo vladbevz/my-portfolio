@@ -5,52 +5,67 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center bg-gray-100">
+    <section className="relative h-screen bg-gradient-to-br from-white to-black flex items-center bg-gray-100">
       {/* Контейнер */}
       <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center">
         {/* Ліва частина: текст */}
         <div className="md:w-1/2 text-left">
-          <p className="text-lg text-gray-700">Hi, I am</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-            Vlad Bevz
-          </h1>
-          <p className="text-lg text-gray-600 mt-2">
-            Full-stack Developer / UI Designer
-          </p>
+        <p className="text-[40px] font-raleway font-bold text-black">
+  Hi, I am
+</p>
+<h1 className="text-[80px] font-raleway font-bold text-black">
+  Vlad Bevz
+</h1>
+<p className="text-[25px] font-raleway font-bold text-[#464444] mt-2">
+  Full-stack Developer
+</p>
+
 
           {/* Іконки соцмереж */}
-          <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition">
-               <FontAwesomeIcon icon={faEnvelope} />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition">
-            <FontAwesomeIcon icon={faPhone} />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition">
-            <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition">
-            <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-          </div>
-
-          {/* Кнопка */}
-          <a
-            href="#contact"
-            className="mt-6 inline-block border border-black text-black px-6 py-3 rounded-lg text-lg font-medium hover:bg-black hover:text-white transition"
-          >
-            Contact Me
-          </a>
+          <div className="flex  space-x-4 mt-8">
+            <a
+    href="mailto:bevz.vlad15@gmail.com"
+    className="text-gray-400 hover:text-blue-500 transition"
+    aria-label="Email"
+  >
+    <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
+  </a>
+  <a
+    href="tel:+33767772915"
+    className="text-gray-400 hover:text-blue-500 transition"
+    aria-label="Phone"
+  >
+    <FontAwesomeIcon icon={faPhone} className="text-2xl" />
+  </a>
+  <a
+    href="https://github.com/vladbevz"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-blue-500 transition"
+    aria-label="GitHub"
+  >
+    <FontAwesomeIcon icon={faGithub} className="text-2xl" />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/vlad-bevz-109093311/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-blue-500 transition"
+    aria-label="LinkedIn"
+  >
+    <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+  </a>
+</div>
         </div>
 
         {/* Права частина: фото */}
-        <div className="md:w-1/2 flex justify-end">
+        {/* <div className="md:w-1/2 flex justify-end">
           <img
             src={profileImage}
             alt="Vlad Bevz"
             className="max-w-xs md:max-w-md lg:max-w-lg rounded-lg"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
