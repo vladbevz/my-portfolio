@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 const About = () => {
   return (
     <section id="about" className="py-16 bg-gray-50">
@@ -14,12 +15,13 @@ const About = () => {
 
         {/* Кнопка Explore */}
         <div className="mt-6">
-          <a 
-            href="#portfolio"
+          <Link 
+            to="portfolio" smooth={true}
+            duration={500}
             className="inline-block border-2 border-black px-6 py-3 text-lg font-medium hover:bg-black hover:text-white transition"
           >
             EXPLORE
-          </a>
+          </Link>
         </div>
 
         {/* Роздільник */}
