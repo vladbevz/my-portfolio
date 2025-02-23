@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 border-2 border-black inline-block px-6 py-2">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
           CONTACT
         </h2>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">

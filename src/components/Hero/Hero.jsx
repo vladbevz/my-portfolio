@@ -1,4 +1,4 @@
-import profileImage from "../../assets/IMG_9231.jpg"; // Додай своє фото
+import profileImage from "../../assets/hero-photo.png"; // Додай своє фото
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -60,14 +60,14 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Права частина: фото */}
-        {/* <div className="md:w-1/2 flex justify-end">
+        
+        <div className="md:w-1/2 flex justify-end">
           <img
             src={profileImage}
             alt="Vlad Bevz"
             className="max-w-xs md:max-w-md lg:max-w-lg rounded-lg"
           />
-        </div> */}
+        </div>
       </div>
     </section>
   );
