@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useState } from "react";
+import emailjs from "emailjs-com";  // імпортуємо EmailJS
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -24,18 +25,24 @@ const Contact = () => {
   const onSubmit = async (data) => {
     console.log("Form Data:", data);
 
-    // Якщо потрібно відправити на бекенд
+    // Використовуємо EmailJS для відправки листа
     try {
-      await fetch("https://your-backend-endpoint.com/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const result = await emailjs.send(
+        'service_o9vuf7o',      
+        'template_bb0cvec',      
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        },                    
+        'mOTfvQqRtMuWQzOlM'    
+      );
 
-      setIsSubmitted(true);
-      reset();
+      console.log("Email sent:", result.text);  // Перевірка результату
+      setIsSubmitted(true);  // Встановлюємо статус успішної відправки
+      reset();  // очищаємо форму після успішної відправки
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error submitting form:", error);  // Вивести помилку в консоль
     }
   };
 

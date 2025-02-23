@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Hero = () => {
   return (
     <section
-      id="hero "
+      id="hero"
       className="relative h-screen bg-gradient-to-br from-white to-black flex items-center bg-gray-100"
     >
       {/* Контейнер */}
