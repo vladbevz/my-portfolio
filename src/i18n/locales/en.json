@@ -1,0 +1,57 @@
+{
+  "header": {
+    "title": "My Portfolio",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "text": "Hi, i am",
+    "title": "Vlad Bevz",
+    "subtitle": "Full-stack Developer"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I am a full-stack web developer with experience in both frontend and backend technologies. I love learning new things and building projects that solve real-world problems.",
+    "explore": "Explore"
+  },
+  "skills": {
+    "title": "My Skills",
+    "useNow": "Using now",
+    "learning": "Learning"
+  },
+  "portfolio": {
+    "title": "My Portfolio",
+    "aqua-tracker": {
+      "description": "A simple way to track your water intake."
+    },
+    "contact-app": {
+      "description": "Manage your contacts easily and efficiently."
+    },
+    "simply-chocolate": {
+      "description": "A stylish website about chocolate."
+    },
+    "link": "View Project",
+    "button": "View More on GitHub"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Feel free to reach out to me for any inquiries or collaboration opportunities.",
+    "successMessage": "Your message has been successfully sent.",
+    "name": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Your Email",
+    "emailPlaceholder": "Enter your email",
+    "message": "Your Message",
+    "messagePlaceholder": "Enter your message",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "reachMe": "Or reach me directly at:",
+    "sendingError": "There was an error sending your message. Please try again later."
+  },
+  "footer": {
+    "button": "Back to top",
+    "copyright": "All rights reserved."
+  }
+}

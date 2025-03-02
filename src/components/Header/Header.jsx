@@ -1,8 +1,13 @@
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.jsx";
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <header
+      key={i18n.language} // Оновлює компонент при зміні мови
       id="top"
       className="bg-black font-montserrat font-bold shadow-md fixed top-0 left-0 w-full z-50"
     >
@@ -12,7 +17,7 @@ const Header = () => {
           to="hero"
           smooth={true}
           duration={500}
-          className=" cursor-pointer  text-[17px] font-bold text-white"
+          className="cursor-pointer text-[17px] font-bold text-white"
         >
           VB
         </Link>
@@ -25,9 +30,9 @@ const Header = () => {
                 to="about"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer text-white hover:text-blue-400 transition text-[17px] "
+                className="cursor-pointer text-white hover:text-blue-400 transition text-[17px]"
               >
-                About me
+                {t("header.about")}
               </Link>
             </li>
             <li>
@@ -35,9 +40,9 @@ const Header = () => {
                 to="skills"
                 smooth={true}
                 duration={500}
-                className=" cursor-pointer text-white hover:text-blue-400 transition text-[17px] "
+                className="cursor-pointer text-white hover:text-blue-400 transition text-[17px]"
               >
-                Skills
+                {t("header.skills")}
               </Link>
             </li>
             <li>
@@ -45,9 +50,9 @@ const Header = () => {
                 to="portfolio"
                 smooth={true}
                 duration={500}
-                className=" cursor-pointer text-white hover:text-blue-400 transition text-[17px] "
+                className="cursor-pointer text-white hover:text-blue-400 transition text-[17px]"
               >
-                Portfolio
+                {t("header.portfolio")}
               </Link>
             </li>
             <li>
@@ -55,13 +60,16 @@ const Header = () => {
                 to="contact"
                 smooth={true}
                 duration={500}
-                className=" cursor-pointer bg-white text-gray-900 px-5 py-2 rounded-xl font-semibold hover:bg-gray-200 transition text-[15px] uppercase"
+                className="cursor-pointer bg-white text-gray-900 px-5 py-2 rounded-xl font-semibold hover:bg-gray-200 transition text-[15px] uppercase"
               >
-                Contact me
+                {t("header.contact")}
               </Link>
             </li>
           </ul>
         </nav>
+
+        {/* Перемикач мов */}
+        <LanguageSwitcher />
       </div>
     </header>
   );

@@ -1,0 +1,57 @@
+{
+  "header": {
+    "title": "Mon Portfolio",
+    "about": "À propos",
+    "skills": "Mes Compétences",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "text": "Bonjour, je suis",
+    "title": "Vlad Bevz",
+    "subtitle": "Full-stack Developpeur"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis développeur web full-stack avec de l'expérience tant en frontend qu'en backend. J'aime apprendre de nouvelles technologies et construire des projets qui résolvent des problèmes réels.",
+    "explore": "Explorer"
+  },
+  "skills": {
+    "title": "Mes compétences",
+    "useNow": "J'utilise",
+    "learning": "J'apprends"
+  },
+  "portfolio": {
+    "title": "Mon Portfolio",
+    "aqua-tracker": {
+      "description": "Un suivi simple de votre consommation d'eau."
+    },
+    "contact-app": {
+      "description": "Gérez vos contacts facilement et rapidement."
+    },
+    "simply-chocolate": {
+      "description": "Un site Web élégant sur le chocolat."
+    },
+    "link": "Voir le projet",
+    "button": "Voir plus sur GitHub"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "N'hésitez pas à me contacter pour toute question ou opportunité de collaboration.",
+    "successMessage": "Votre message a été envoyé avec succès.",
+    "name": "Votre nom",
+    "namePlaceholder": "Entrez votre nom",
+    "email": "Votre email",
+    "emailPlaceholder": "Entrez votre email",
+    "message": "Votre message",
+    "messagePlaceholder": "Entrez votre message",
+    "sending": "Envoi...",
+    "send": "Envoyer le message",
+    "reachMe": "Ou contactez-moi directement à :",
+    "sendingError": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard."
+  },
+  "footer": {
+    "button": "Retour en haut",
+    "copyright": "Tous droits réservés."
+  }
+}
