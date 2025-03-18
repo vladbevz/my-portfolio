@@ -1,29 +1,28 @@
-import { useTranslation } from "react-i18next"; // імпортуємо useTranslation для роботи з перекладами
-import profileImage from "../../assets/hero-photo.png"; // Додай своє фото
+import { useTranslation } from "react-i18next";
+import profileImage from "../../assets/result.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
-  const { t } = useTranslation(); // використовуємо useTranslation для отримання перекладів
+  const { t } = useTranslation();
 
   return (
     <section
       id="hero"
       className="relative h-screen bg-gradient-to-br from-white to-black flex items-center bg-gray-100"
     >
-      {/* Контейнер */}
       <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center">
         {/* Ліва частина: текст */}
-        <div className="md:w-1/2 text-left">
+        <div className="md:w-1/2 flex flex-col justify-center">
           <p className="text-[40px] font-raleway font-bold text-black">
-            {t("hero.text")} {/* Переклад "Hi, I am" */}
+            {t("hero.text")}
           </p>
           <h1 className="text-[80px] font-raleway font-bold text-black">
             {t("hero.title")}
           </h1>
           <p className="text-[25px] font-raleway font-bold text-[#464444] mt-2">
-            {t("hero.subtitle")} {/* Переклад "Full-stack Developer" */}
+            {t("hero.subtitle")}
           </p>
 
           {/* Іконки соцмереж */}
@@ -64,12 +63,8 @@ const Hero = () => {
         </div>
 
         {/* Права частина: фото */}
-        <div className="md:w-1/2 flex justify-end">
-          <img
-            src={profileImage}
-            alt="Vlad Bevz"
-            className="max-w-xs md:max-w-md lg:max-w-lg rounded-lg"
-          />
+        <div className="">
+          <img src={profileImage} alt="Vlad Bevz" className="max-w-70" />
         </div>
       </div>
     </section>
