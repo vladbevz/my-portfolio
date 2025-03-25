@@ -10,34 +10,33 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen bg-gradient-to-br from-white to-black flex items-center bg-gray-100"
+      className="relative min-h-screen bg-gradient-to-br from-white to-black flex items-center px-6 md:px-12 lg:px-24"
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center">
+      {/* Контейнер */}
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:space-x-4 w-full max-w-4xl">
         {/* Ліва частина: текст */}
-        <div className="md:w-1/2 flex flex-col justify-center">
-          <p className="text-[40px] font-raleway font-bold text-black">
+        <div className=" md:w-1/2 flex flex-col justify-center items-center text-center">
+          <p className="text-3xl md:text-4xl font-raleway font-bold text-black">
             {t("hero.text")}
           </p>
-          <h1 className="text-[80px] font-raleway font-bold text-black">
+          <h1 className="text-5xl md:text-6xl font-raleway font-bold text-black">
             {t("hero.title")}
           </h1>
-          <p className="text-[25px] font-raleway font-bold text-[#464444] mt-2">
+          <p className="text-xl md:text-2xl font-raleway font-bold text-[#464444] mt-2">
             {t("hero.subtitle")}
           </p>
 
           {/* Іконки соцмереж */}
-          <div className="flex space-x-4 mt-8">
+          <div className="flex justify-center md:justify-start space-x-4 mt-6">
             <a
               href="mailto:bevz.vlad15@gmail.com"
               className="text-gray-400 hover:text-blue-500 transition"
-              aria-label="Email"
             >
               <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
             </a>
             <a
               href="tel:+33767772915"
               className="text-gray-400 hover:text-blue-500 transition"
-              aria-label="Phone"
             >
               <FontAwesomeIcon icon={faPhone} className="text-2xl" />
             </a>
@@ -46,7 +45,6 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition"
-              aria-label="GitHub"
             >
               <FontAwesomeIcon icon={faGithub} className="text-2xl" />
             </a>
@@ -55,7 +53,6 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition"
-              aria-label="LinkedIn"
             >
               <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
             </a>
@@ -63,8 +60,12 @@ const Hero = () => {
         </div>
 
         {/* Права частина: фото */}
-        <div className="">
-          <img src={profileImage} alt="Vlad Bevz" className="max-w-70" />
+        <div className="md:w-1/2 flex justify-center items-center">
+          <img
+            src={profileImage}
+            alt="Vlad Bevz"
+            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg object-cover"
+          />
         </div>
       </div>
     </section>

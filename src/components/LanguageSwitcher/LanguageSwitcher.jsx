@@ -1,32 +1,25 @@
-import { useTranslation } from "react-i18next"; // імпортуємо useTranslation для роботи з перекладами
+import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation(); // отримуємо i18n для зміни мови
+  const { i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng); // змінюємо мову
+    i18n.changeLanguage(lng);
   };
 
   return (
-    <div className="flex space-x-4">
-      <button
-        onClick={() => changeLanguage("en")}
-        className="text-white hover:text-blue-400 transition"
-      >
-        EN
-      </button>
-      <button
-        onClick={() => changeLanguage("uk")}
-        className="text-white hover:text-blue-400 transition"
-      >
-        UA
-      </button>
-      <button
-        onClick={() => changeLanguage("fr")}
-        className="text-white hover:text-blue-400 transition"
-      >
-        FR
-      </button>
+    <div className="flex space-x-2">
+      {["en", "uk", "fr"].map((lng) => (
+        <button
+          key={lng}
+          onClick={() => changeLanguage(lng)}
+          className={`px-2 py-0.5 rounded-md text-white transition cursor-pointer ${
+            i18n.language === lng ? "bg-blue-500 shadow-md" : "bg-transparent"
+          }`}
+        >
+          {lng.toUpperCase()}
+        </button>
+      ))}
     </div>
   );
 };

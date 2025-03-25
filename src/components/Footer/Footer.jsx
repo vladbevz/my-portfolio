@@ -24,7 +24,7 @@ const Footer = () => {
         </Link>
 
         {/* Соціальні мережі */}
-        <div className="flex justify-center space-x-6 mt-6 text-2xl">
+        <div className="flex justify-center space-x-6 mt-6 text-2xl flex-wrap justify-center">
           {[
             {
               href: "mailto:bevz.vlad15@gmail.com",
@@ -48,7 +48,7 @@ const Footer = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-500 transition"
+              className="text-gray-400 hover:text-blue-500 transition mb-4"
               aria-label={label}
             >
               <FontAwesomeIcon icon={icon} />
